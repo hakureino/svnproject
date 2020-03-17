@@ -21,13 +21,9 @@ import org.tmatesoft.svn.core.wc.SVNRevision;
 import org.tmatesoft.svn.core.wc.SVNWCUtil;
 
 public class SVNUtil {
-	private String userName = "lis87h";
-	private String password = "lis87fff";
-	private String urlString = "http://svn.isid.co.jp/svn/istd";
-	// private String urlStringfile = "http://svn.isid.co.jp/svn/istd";
-	// private String userName = "testUserName";
-	// private String password = "testPassword";
-	//private String urlString = "testUrlString";
+	private String userName = "testUserName";
+	private String password = "testPassword";
+	private String urlString = "testUrlString";
 	private String urlStringfile = "testUrlStringfile";
 	boolean readonly = true;
 	private DefaultSVNOptions options = SVNWCUtil.createDefaultOptions(readonly);
@@ -113,7 +109,7 @@ public class SVNUtil {
 		SVNUtil demo = new SVNUtil();
 		try {
 			//System.out.println(demo.getChangeFileList(55881l));
-			System.out.println("版本号"+demo.getonepathSvninfo("/branches/develop/maintenance/web/istandard/src/main/java/jp/co/isid/istandard/hc/logic/hc0302/impl/HC03020401_R01ReportPrevLogicImpl.java").getRevision());
+			System.out.println("版本号"+demo.getonepathSvninfo("/HC03020401_R01ReportPrevLogicImpl.java").getRevision());
 		} catch (SVNException e) {
 			e.printStackTrace();
 		}
